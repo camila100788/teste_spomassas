@@ -12,65 +12,65 @@
 <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
 
 <style>
-  body {
-    font-family: 'Poppins', sans-serif;
-    background: #f2f5f7;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-  }
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f2f5f7;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
 
-  .container {
-    width: 100%;
-    max-width: 540px;
-    background: #fff;
-    margin-top: 40px;
-    padding: 30px;
-    border-radius: 14px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-  }
+.container {
+  width: 100%;
+  max-width: 540px;
+  background: #fff;
+  margin-top: 40px;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
 
-  h1 {
-    text-align: center;
-    margin-bottom: 10px;
-  }
+h1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
 
-  label {
-    font-weight: 600;
-    margin-top: 20px;
-    display: block;
-  }
+label {
+  font-weight: 600;
+  margin-top: 20px;
+  display: block;
+}
 
-  input, textarea, select {
-    width: 100%;
-    padding: 12px;
-    margin-top: 7px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    font-size: 16px;
-  }
+input, textarea, select {
+  width: 100%;
+  padding: 12px;
+  margin-top: 7px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
 
-  textarea {
-    height: 90px;
-  }
+textarea {
+  height: 90px;
+}
 
-  button {
-    width: 100%;
-    padding: 15px;
-    margin-top: 30px;
-    background: #25D366;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-  }
+button {
+  width: 100%;
+  padding: 15px;
+  margin-top: 30px;
+  background: #25D366;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
 
-  button:hover {
-    background: #1ebe5d;
-  }
+button:hover {
+  background: #1ebe5d;
+}
 </style>
 </head>
 
@@ -93,47 +93,93 @@
     <option value="Macarrão com Carne Seca - R$ 29,00">Macarrão com Carne Seca - R$ 29,00</option>
     <option value="Panqueca de Frango - R$ 21,00">Panqueca de Frango - R$ 21,00</option>
     <option value="Panqueca de Carne - R$ 24,00">Panqueca de Carne - R$ 24,00</option>
-    <option value="Panqueca de Camarão - R$ 31,00</option>
-    <option value="Lasanha de Frango - R$ 21,00</option>
-    <option value="Lasanha de Carne - R$ 24,00</option>
-    <option value="Ravioli de Frango - R$ 25,00</option>
-    <option value="Ravioli de Carne - R$ 27,00</option>
-    <option value="Ravioli de Camarão - R$ 35,00</option>
-    <option value="Ravioli de Carne Seca - R$ 35,00</option>
-    <option value="Capeletti de Frango - R$ 25,00</option>
-    <option value="Capeletti de Carne - R$ 27,00</option>
-    <option value="Capeletti de Camarão - R$ 35,00</option>
-    <option value="Capeletti de Carne Seca - R$ 35,00</option>
-    <option value="Risoto de Frango - R$ 21,00</option>
-    <option value="Risoto de Carne - R$ 24,00</option>
-    <option value="Risoto de Camarão - R$ 31,00</option> 
-    <option value="Risoto de Carne Seca - R$ 31,00</option> 
-    <option value="Nhoque de Camarão - R$ 33,00</option> 
-    <option value="Nhoque de Carne Seca - R$ 33,00</option> 
-    <option value="Nhoque de Frango - R$ 23,00</option>
-    <option value="Nhoque de Carne - R$ 25,00</option>
+    <option value="Panqueca de Camarão - R$ 31,00">Panqueca de Camarão - R$ 31,00</option>
+    <option value="Lasanha de Frango - R$ 21,00">Lasanha de Frango - R$ 21,00</option>
+    <option value="Lasanha de Carne - R$ 24,00">Lasanha de Carne - R$ 24,00</option>
+    <option value="Ravioli de Frango - R$ 25,00">Ravioli de Frango - R$ 25,00</option>
+    <option value="Ravioli de Carne - R$ 27,00">Ravioli de Carne - R$ 27,00</option>
+    <option value="Ravioli de Camarão - R$ 35,00">Ravioli de Camarão - R$ 35,00</option>
+    <option value="Ravioli de Carne Seca - R$ 35,00">Ravioli de Carne Seca - R$ 35,00</option>
+    <option value="Capeletti de Frango - R$ 25,00">Capeletti de Frango - R$ 25,00</option>
+    <option value="Capeletti de Carne - R$ 27,00">Capeletti de Carne - R$ 27,00</option>
+    <option value="Capeletti de Camarão - R$ 35,00">Capeletti de Camarão - R$ 35,00</option>
+    <option value="Capeletti de Carne Seca - R$ 35,00">Capeletti de Carne Seca - R$ 35,00</option>
+    <option value="Risoto de Frango - R$ 21,00">Risoto de Frango - R$ 21,00</option>
+    <option value="Risoto de Carne - R$ 24,00">Risoto de Carne - R$ 24,00</option>
+    <option value="Risoto de Camarão - R$ 31,00">Risoto de Camarão - R$ 31,00</option>
+    <option value="Risoto de Carne Seca - R$ 31,00">Risoto de Carne Seca - R$ 31,00</option>
+    <option value="Nhoque de Camarão - R$ 33,00">Nhoque de Camarão - R$ 33,00</option>
+    <option value="Nhoque de Carne Seca - R$ 33,00">Nhoque de Carne Seca - R$ 33,00</option>
+    <option value="Nhoque de Frango - R$ 23,00">Nhoque de Frango - R$ 23,00</option>
+    <option value="Nhoque de Carne - R$ 25,00">Nhoque de Carne - R$ 25,00</option>
   </select>
 
-  <!-- PERGUNTA 2: TIPO DE MASSA -->
-  <label>Escolha o tipo de massa</label>
+  <!-- ESCOLHA DA MASSA -->
+  <label>Escolha a massa</label>
   <select id="massa" required>
     <option value="">Selecionar...</option>
-    <option value="Espaguete">Espaguete</option>
     <option value="Penne">Penne</option>
-    <option value="Parafuso">Parafuso</option>
     <option value="Talharim">Talharim</option>
+    <option value="Espaguete">Espaguete</option>
+    <option value="Parafuso">Parafuso</option>
   </select>
 
-  <!-- PERGUNTA 3: OBSERVAÇÕES -->
-  <label>Alguma observação?</label>
-  <textarea id="obs" placeholder="Ex: sem molho, pouco sal, etc."></textarea>
+  <!-- ESCOLHA DO MOLHO -->
+  <label>Escolha o molho</label>
+  <select id="molho" required>
+    <option value="">Selecionar...</option>
+    <option value="Branco">Branco</option>
+    <option value="Vermelho">Vermelho</option>
+    <option value="Rose">Rose</option>
+    <option value="Quatro queijos">Quatro queijos</option>
+  </select>
 
-  <!-- PERGUNTA 4: NOME DO CLIENTE -->
-  <label>Seu nome</label>
+  <!-- ESCOLHA DE INGREDIENTES -->
+  <label>Escolha até 7 ingredientes</label>
+  <select id="ingredientes" multiple required>
+    <option value="Queijo Mussarela">Queijo Mussarela</option>
+    <option value="Ervilha">Ervilha</option>
+    <option value="Salsicha">Salsicha</option>
+    <option value="Pimentão">Pimentão</option>
+    <option value="Calabresa">Calabresa</option>
+    <option value="Cebola">Cebola</option>
+    <option value="Bacon">Bacon</option>
+    <option value="Palmito">Palmito</option>
+    <option value="Azeitona">Azeitona</option>
+    <option value="Tomate">Tomate</option>
+    <option value="Champignon">Champignon</option>
+    <option value="Presunto">Presunto</option>
+    <option value="Ovo de codorna">Ovo de codorna</option>
+    <option value="Salsinha">Salsinha</option>
+    <option value="Milho">Milho</option>
+  </select>
+
+  <!-- FINALIZAÇÃO -->
+  <label>Finalização</label>
+  <select id="finalizacao" multiple required>
+    <option value="Alho frito">Alho frito</option>
+    <option value="Queijo ralado">Queijo ralado</option>
+    <option value="Orégano">Orégano</option>
+    <option value="Pimenta calabresa">Pimenta calabresa</option>
+  </select>
+
+  <!-- BEBIDAS -->
+  <label>Bebidas</label>
+  <select id="bebidas" multiple>
+    <option value="Guaravita - R$ 2,00">Guaravita - R$ 2,00</option>
+    <option value="Coca Cola 2 L - R$ 12,00">Coca Cola 2 L - R$ 12,00</option>
+    <option value="Coca Cola 600 ml - R$ 7,00">Coca Cola 600 ml - R$ 7,00</option>
+    <option value="Coca cola lata - R$ 5,00">Coca cola lata - R$ 5,00</option>
+    <option value="Refrigerante 2 litros sabores - R$ 10,00">Refrigerante 2 litros sabores - R$ 10,00</option>
+    <option value="Água sem gás - R$ 2,00">Água sem gás - R$ 2,00</option>
+    <option value="Água com gás - R$ 3,00">Água com gás - R$ 3,00</option>
+  </select>
+
+  <!-- NOME E ENDEREÇO -->
+  <label>Nome completo</label>
   <input type="text" id="nome" required />
 
-  <!-- PERGUNTA 5: ENDEREÇO -->
-  <label>Endereço para entrega</label>
+  <label>Endereço (Rua, número, referência)</label>
   <textarea id="endereco" required></textarea>
 
   <button type="submit">Enviar Pedido no WhatsApp</button>
@@ -143,17 +189,13 @@
 </div>
 
 <script>
-// Ativa o select com busca
-new Choices("#proteina", {
-  searchPlaceholderValue: "Buscar proteína...",
-  itemSelectText: "",
-  allowHTML: true
-});
-new Choices("#massa", {
-  searchPlaceholderValue: "Buscar...",
-  itemSelectText: "",
-  allowHTML: true
-});
+// Ativa selects com Choices.js
+new Choices("#proteina", {searchPlaceholderValue: "Buscar proteína...", itemSelectText: "", allowHTML: true});
+new Choices("#massa", {searchPlaceholderValue: "Buscar...", itemSelectText: "", allowHTML: true});
+new Choices("#molho", {searchPlaceholderValue: "Buscar molho...", itemSelectText: "", allowHTML: true});
+new Choices("#ingredientes", {removeItemButton: true, maxItemCount: 7, itemSelectText: "", allowHTML: true});
+new Choices("#finalizacao", {removeItemButton: true, itemSelectText: "", allowHTML: true});
+new Choices("#bebidas", {removeItemButton: true, itemSelectText: "", allowHTML: true});
 
 // Envio para WhatsApp
 document.getElementById("pedidoForm").addEventListener("submit", function(e){
@@ -161,7 +203,10 @@ document.getElementById("pedidoForm").addEventListener("submit", function(e){
 
   const proteina = document.getElementById("proteina").value;
   const massa = document.getElementById("massa").value;
-  const obs = document.getElementById("obs").value;
+  const molho = document.getElementById("molho").value;
+  const ingredientes = Array.from(document.getElementById("ingredientes").selectedOptions).map(opt => opt.value).join(", ");
+  const finalizacao = Array.from(document.getElementById("finalizacao").selectedOptions).map(opt => opt.value).join(", ");
+  const bebidas = Array.from(document.getElementById("bebidas").selectedOptions).map(opt => opt.value).join(", ");
   const nome = document.getElementById("nome").value;
   const endereco = document.getElementById("endereco").value;
 
@@ -173,10 +218,12 @@ document.getElementById("pedidoForm").addEventListener("submit", function(e){
     `📍 *Endereço:* ${endereco}\n\n` +
     `🥩 *Proteína:* ${proteina}\n` +
     `🍝 *Massa:* ${massa}\n` +
-    `📝 *Observações:* ${obs || "Nenhuma"}\n`;
+    `🧂 *Molho:* ${molho}\n` +
+    `🥗 *Ingredientes:* ${ingredientes}\n` +
+    `✨ *Finalização:* ${finalizacao}\n` +
+    `🥤 *Bebidas:* ${bebidas || "Nenhuma"}\n`;
 
   const url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
-
   window.open(url, "_blank");
 });
 </script>
