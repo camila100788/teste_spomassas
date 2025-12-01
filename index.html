@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<title>Spomassas Acari - Faça seu pedido</title>
+
+<!-- Fonte bonita -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<!-- Choices.js (select com busca) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+
+<style>
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: #f2f5f7;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 540px;
+    background: #fff;
+    margin-top: 40px;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  label {
+    font-weight: 600;
+    margin-top: 20px;
+    display: block;
+  }
+
+  input, textarea, select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 7px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+  }
+
+  textarea {
+    height: 90px;
+  }
+
+  button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 30px;
+    background: #25D366;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background: #1ebe5d;
+  }
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<h1>🍝 Spomassas Acari<br>Faça seu pedido!</h1>
+
+<form id="pedidoForm">
+
+  <!-- SELECT DE PROTEÍNA -->
+  <label>Escolha sua proteína</label>
+  <select id="proteina" required>
+    <option value="">Selecionar...</option>
+    <option value="Macarrão sem proteína - R$ 17,00">Macarrão sem proteína - R$ 17,00</option>
+    <option value="Macarrão com Frango - R$ 19,00">Macarrão com Frango - R$ 19,00</option>
+    <option value="Macarrão com Carne - R$ 22,00">Macarrão com Carne - R$ 22,00</option>
+    <option value="Macarrão com Almôndegas - R$ 23,00">Macarrão com Almôndegas - R$ 23,00</option>
+    <option value="Macarrão com Camarão - R$ 29,00">Macarrão com Camarão - R$ 29,00</option>
+    <option value="Macarrão com Carne Seca - R$ 29,00">Macarrão com Carne Seca - R$ 29,00</option>
+    <option value="Panqueca de Frango - R$ 21,00">Panqueca de Frango - R$ 21,00</option>
+    <option value="Panqueca de Carne - R$ 24,00">Panqueca de Carne - R$ 24,00</option>
+  </select>
+
+  <!-- PERGUNTA 2: TIPO DE MASSA -->
+  <label>Escolha o tipo de massa</label>
+  <select id="massa" required>
+    <option value="">Selecionar...</option>
+    <option value="Espaguete">Espaguete</option>
+    <option value="Penne">Penne</option>
+    <option value="Parafuso">Parafuso</option>
+    <option value="Talharim">Talharim</option>
+  </select>
+
+  <!-- PERGUNTA 3: OBSERVAÇÕES -->
+  <label>Alguma observação?</label>
+  <textarea id="obs" placeholder="Ex: sem molho, pouco sal, etc."></textarea>
+
+  <!-- PERGUNTA 4: NOME DO CLIENTE -->
+  <label>Seu nome</label>
+  <input type="text" id="nome" required />
+
+  <!-- PERGUNTA 5: ENDEREÇO -->
+  <label>Endereço para entrega</label>
+  <textarea id="endereco" required></textarea>
+
+  <button type="submit">Enviar Pedido no WhatsApp</button>
+
+</form>
+
+</div>
+
+<script>
+// Ativa o select com busca
+new Choices("#proteina", {
+  searchPlaceholderValue: "Buscar proteína...",
+  itemSelectText: "",
+  allowHTML: true
+});
+new Choices("#massa", {
+  searchPlaceholderValue: "Buscar...",
+  itemSelectText: "",
+  allowHTML: true
+});
+
+// Envio para WhatsApp
+document.getElementById("pedidoForm").addEventListener("submit", function(e){
+  e.preventDefault();
+
+  const proteina = document.getElementById("proteina").value;
+  const massa = document.getElementById("massa").value;
+  const obs = document.getElementById("obs").value;
+  const nome = document.getElementById("nome").value;
+  const endereco = document.getElementById("endereco").value;
+
+  const numero = "5521989959161";
+
+  const texto = 
+    `🍝 *NOVO PEDIDO SPOMASSAS*\n\n` +
+    `👤 *Cliente:* ${nome}\n` +
+    `📍 *Endereço:* ${endereco}\n\n` +
+    `🥩 *Proteína:* ${proteina}\n` +
+    `🍝 *Massa:* ${massa}\n` +
+    `📝 *Observações:* ${obs || "Nenhuma"}\n`;
+
+  const url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
+
+  window.open(url, "_blank");
+});
+</script>
+
+</body>
+</html>
