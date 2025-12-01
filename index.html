@@ -81,7 +81,7 @@ button:hover {
 
 <form id="pedidoForm">
 
-  <!-- SELECT DE PROTEÍNA -->
+  <!-- PROTEÍNA -->
   <label>Escolha sua proteína</label>
   <select id="proteina" required>
     <option value="">Selecionar...</option>
@@ -114,7 +114,7 @@ button:hover {
     <option value="Nhoque de Carne - R$ 25,00">Nhoque de Carne - R$ 25,00</option>
   </select>
 
-  <!-- ESCOLHA DA MASSA -->
+  <!-- MASSA -->
   <label>Escolha a massa</label>
   <select id="massa" required>
     <option value="">Selecionar...</option>
@@ -124,7 +124,7 @@ button:hover {
     <option value="Parafuso">Parafuso</option>
   </select>
 
-  <!-- ESCOLHA DO MOLHO -->
+  <!-- MOLHO -->
   <label>Escolha o molho</label>
   <select id="molho" required>
     <option value="">Selecionar...</option>
@@ -134,7 +134,7 @@ button:hover {
     <option value="Quatro queijos">Quatro queijos</option>
   </select>
 
-  <!-- ESCOLHA DE INGREDIENTES -->
+  <!-- INGREDIENTES -->
   <label>Escolha até 7 ingredientes</label>
   <select id="ingredientes" multiple required>
     <option value="Queijo Mussarela">Queijo Mussarela</option>
@@ -189,13 +189,13 @@ button:hover {
 </div>
 
 <script>
-// Ativa selects com Choices.js
-new Choices("#proteina", {searchPlaceholderValue: "Buscar proteína...", itemSelectText: "", allowHTML: true});
-new Choices("#massa", {searchPlaceholderValue: "Buscar massa...", itemSelectText: "", allowHTML: true});
-new Choices("#molho", {searchPlaceholderValue: "Buscar molho...", itemSelectText: "", allowHTML: true});
-new Choices("#ingredientes", {removeItemButton: true, maxItemCount: 7, itemSelectText: "", allowHTML: true});
-new Choices("#finalizacao", {removeItemButton: true, itemSelectText: "", allowHTML: true});
-new Choices("#bebidas", {removeItemButton: true, itemSelectText: "", allowHTML: true});
+// Ativa selects com Choices.js mantendo ordem original
+new Choices("#proteina", {searchPlaceholderValue:"Buscar proteína...", itemSelectText:"", allowHTML:true, shouldSort:false});
+new Choices("#massa", {searchPlaceholderValue:"Buscar massa...", itemSelectText:"", allowHTML:true, shouldSort:false});
+new Choices("#molho", {searchPlaceholderValue:"Buscar molho...", itemSelectText:"", allowHTML:true, shouldSort:false});
+new Choices("#ingredientes", {removeItemButton:true, maxItemCount:7, itemSelectText:"", allowHTML:true, shouldSort:false});
+new Choices("#finalizacao", {removeItemButton:true, itemSelectText:"", allowHTML:true, shouldSort:false});
+new Choices("#bebidas", {removeItemButton:true, itemSelectText:"", allowHTML:true, shouldSort:false});
 
 // Envio para WhatsApp
 document.getElementById("pedidoForm").addEventListener("submit", function(e){
@@ -204,9 +204,9 @@ document.getElementById("pedidoForm").addEventListener("submit", function(e){
   const proteina = document.getElementById("proteina").value;
   const massa = document.getElementById("massa").value;
   const molho = document.getElementById("molho").value;
-  const ingredientes = Array.from(document.getElementById("ingredientes").selectedOptions).map(opt => opt.value).join(", ");
-  const finalizacao = Array.from(document.getElementById("finalizacao").selectedOptions).map(opt => opt.value).join(", ");
-  const bebidas = Array.from(document.getElementById("bebidas").selectedOptions).map(opt => opt.value).join(", ");
+  const ingredientes = Array.from(document.getElementById("ingredientes").selectedOptions).map(opt=>opt.value).join(", ");
+  const finalizacao = Array.from(document.getElementById("finalizacao").selectedOptions).map(opt=>opt.value).join(", ");
+  const bebidas = Array.from(document.getElementById("bebidas").selectedOptions).map(opt=>opt.value).join(", ");
   const nome = document.getElementById("nome").value;
   const endereco = document.getElementById("endereco").value;
 
